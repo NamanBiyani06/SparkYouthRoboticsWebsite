@@ -1,0 +1,34 @@
+:root {
+  /* Color styles */
+  --primary-dark: ;
+  --primary-light: ;
+  --orange-light: ;
+  --orange-dark: ;
+  --yellow: #ffcf44;
+  --light-grey: #878787;
+  --dark-grey: #272727;
+
+  /*Font weight*/
+  --bold: 700;
+  --semi-bold: 600;
+  --medium: 500;
+  --regular: 400;
+  --light: 300;
+
+  /*Font size*/
+  --h1: 64px;
+  --h2: 48px;
+  --h3: 42px;
+  --h4: 32px;
+
+  --p-regular: 16px;
+  --p-medium: 18px;
+  --p-light: 13px;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #32343e;
+}
