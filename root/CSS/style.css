@@ -1,0 +1,45 @@
+body
+{
+  overflow-x: hidden;
+  background-color: rgb(18, 24, 38);
+}
+html{
+  cursor: dot, pointer;
+}
+
+/*
+#backgroundImage
+{
+  background-image: url(/root/Images/syrcLogo.png);
+}
+
+
+#circularcursor {
+  background-color: white;
+  border:1px solid white;    
+  height:20px;
+  width:20px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  position: absolute;
+  z-index: 40;
+}
+
+*/
+
+/* Configure this in Tailwind.config.js */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 2s ease-in forwards;
+}
