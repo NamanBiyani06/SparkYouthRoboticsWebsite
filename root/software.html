@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spark Youth Robotics Club</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" href="/root/Images/syrcLogo.png">
+
+  <!-- installations -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap" rel="stylesheet">
+
+  <!-- tailwind configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+          },
+          fontFamily: {
+            'code': ['Martian Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <!-- navigation bar -->
+  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="#" class="flex items-center">
+        <img src="Images/syrcLogo.png" class="h-6 mr-3 sm:h-10" alt="SYRC Logo"/>
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Team 8729</span>
+      </a>
+      
+      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      
+      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+        <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium  bg-opacity-20 backdrop-blur-lg">
+          <li>
+            <a href="/root/index.html" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Subteams <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Gallery</a>
+                  </div>
+              </div>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sponsors</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- header -->
+  <section class="bg-white dark:bg-gray-900" data-aos="fade-up" data-aos-duration="1500">
+    <div class="mt-16 grid h-screen flex px-4 justify-center py-8 mx-auto lg:py-16 center" >
+      <div class= "mr-auto place-self-center translate-y-16">
+        <h1 class = "justify-center text-transparent bg-clip-text mb-4 text-4xl -tight leading-none md:text-5xl lg:text-6xl text-center font-code translate-y-3">
+        <a href="" class="text-blue-400">print<span class="wrap"></span></a><a href="" class="text-gray-300">("<span class="wrap"></span></a><a href="" class="typewrite text-green-400" data-period="2000" data-type='["We are Software", "We are Coders", "We are Developers"]'><span class="wrap"></span></a><a href="" class="text-gray-300">")<span class="wrap"></span></a>
+          <!-- <a href="" class="text-red-400">System
+            <span class="wrap"></span>
+          </a><a href="" class="text-gray-300">.
+            <span class="wrap"></span>
+          </a>
+          <a href="" class="text-blue-400">out
+            <span class="wrap"></span>
+          </a>
+          <a href="" class="text-gray-300">. 
+            <span class="wrap"></span>
+          </a>
+          <a href="" class="text-blue-400">println
+            <span class="wrap"></span>
+          </a>
+          <a href="" class="text-gray-300">("
+            <span class="wrap"></span>
+          </a>
+          <a href="" class="typewrite text-green-400" data-period="2000" data-type='["Software"]'>
+            <span class="wrap"></span>
+          </a>
+          <a href="" class="text-gray-300">");
+            <span class="wrap"></span>
+          </a> -->
+        </h1>
+      </div>
+      <!-- divider with downwards arrow -->
+      <div class="inline-flex justify-center items-center w-full -translate-y-32">
+        <hr class="my-8 w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700">
+        <div class="absolute left-1/2 px-4 bg-white -translate-x-1/2 dark:bg-gray-900">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="animate-bounce w-9 h-9 text-gray-700 dark:text-gray-300">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+          </svg>      
+        </div>
+      </div>      
+    </div>
+  </section>
+
+  <!-- what is software? -->
+  <div class="py-6 sm:py-8 lg:py-12 font-code">
+    <div class="max-w-screen-xl px-4 md:px-8 mx-auto">
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div>
+          <div class="h-64 md:h-auto bg-gray-100 overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600&h=750" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center"/>
+          </div>
+        </div>
+  
+        <div class="md:pt-8 items-center lg:translate-y-16">
+          <h1 class="text-white text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 md:mb-6">Our competitive advantage</h1>
+  
+          <p class="text-gray-300 sm:text-lg mb-6 md:mb-8">
+            This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated. It may be used to display a sample of fonts or generate text for testing. Filler text is dummy text which has no meaning however looks very similar to real text.<br /><br />
+  
+            This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is <a href="#" class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 underline transition duration-100">random</a> or otherwise generated. It may be used to display a sample of fonts or generate text for testing. Filler text is dummy text which has no meaning however looks very similar to real text.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- divider -->
+  <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700 my-8 lg:my-16">
+  
+  <!-- current projects -->
+  <div class="py-6 sm:py-8 lg:py-12 font-code">
+    <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+      <!-- text - start -->
+      <div class="mx-auto max-w-screen-sm text-center mb-10">
+        <h2 class="text-4xl tracking-tight font-extrabold leading-tight text-white bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 font-code">Current Projects</h2>
+      </div>
+      <!-- text - end -->
+  
+      <div class="grid sm:px-4 md:px-32 lg:px-40 xl:px-48 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 md:gap-6 xl:gap-8">
+        <!-- article - start -->
+        <div class="flex flex-col bg-gray-800 rounded-lg overflow-hidden hover:scale-105 transition duration-300">
+          <a href="#" class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
+          </a>
+  
+          <div class="flex flex-col flex-1 p-4 sm:p-6">
+            <h2 class="text-white text-lg font-semibold mb-2">
+              <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">Command-Based Programming</a>
+            </h2>
+  
+            <p class="text-white mb-4">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+  
+            <div class="flex justify-between items-end mt-auto">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1611898872015-0571a9e38375?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
+                </div>
+  
+                <div>
+                  <span class="block text-white">Mike Lane</span>
+                  <span class="block text-gray-300 text-sm">July 19, 2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- article - end -->
+  
+        <!-- article - start -->
+        <div class="flex flex-col bg-gray-800 rounded-lg overflow-hidden hover:scale-105 transition duration-300">
+          <a href="#" class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
+          </a>
+  
+          <div class="flex flex-col flex-1 p-4 sm:p-6">
+            <h2 class="text-white text-lg font-semibold mb-2">
+              <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">Robot Simulation</a>
+            </h2>
+  
+            <p class="text-white mb-4">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+  
+            <div class="flex justify-between items-end mt-auto">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1611898872015-0571a9e38375?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
+                </div>
+  
+                <div>
+                  <span class="block text-white">Mike Lane</span>
+                  <span class="block text-gray-300 text-sm">July 19, 2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- article - end -->
+  
+        <!-- article - start -->
+        <div class="flex flex-col bg-gray-800 rounded-lg overflow-hidden hover:scale-105 transition duration-300">
+          <a href="#" class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
+          </a>
+  
+          <div class="flex flex-col flex-1 p-4 sm:p-6">
+            <h2 class="text-white text-lg font-semibold mb-2">
+              <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">Trajectory Tracking</a>
+            </h2>
+  
+            <p class="text-white mb-4">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+  
+            <div class="flex justify-between items-end mt-auto">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1611898872015-0571a9e38375?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
+                </div>
+  
+                <div>
+                  <span class="block text-white">Mike Lane</span>
+                  <span class="block text-gray-300 text-sm">July 19, 2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- article - end -->
+  
+        <!-- article - start -->
+        <div class="flex flex-col bg-gray-800 rounded-lg overflow-hidden hover:scale-105 transition duration-300">
+          <a href="#" class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
+          </a>
+  
+          <div class="flex flex-col flex-1 p-4 sm:p-6">
+            <h2 class="text-white text-lg font-semibold mb-2">
+              <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">RGB Lighting</a>
+            </h2>
+  
+            <p class="text-white mb-4">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+  
+            <div class="flex justify-between items-end mt-auto">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1611898872015-0571a9e38375?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
+                </div>
+  
+                <div>
+                  <span class="block text-white">Mike Lane</span>
+                  <span class="block text-gray-300 text-sm">July 19, 2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- article - end -->
+      </div>
+    </div>
+  </div>
+
+  <!-- divider -->
+  <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700 my-8 lg:my-16">
+
+  <!-- software gallery -->
+  <div class="py-6 sm:py-8 lg:py-12 mb-32">
+    <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+
+      <div class="mx-auto max-w-screen-sm text-center mb-10">
+        <h2 class="text-4xl tracking-tight font-extrabold leading-tight text-white bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 font-code">Software Gallery</h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 xl:gap-8 mb-4 md:mb-8">
+        <!-- image - start -->
+        <a href="#" class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+  
+          <div class="bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50 absolute inset-0 pointer-events-none"></div>
+  
+          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">VR</span>
+        </a>
+        <!-- image - end -->
+  
+        <!-- image - start -->
+        <a href="#" class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
+          <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Magicle" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+  
+          <div class="bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50 absolute inset-0 pointer-events-none"></div>
+  
+          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">Tech</span>
+        </a>
+        <!-- image - end -->
+  
+        <!-- image - start -->
+        <a href="#" class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
+          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+  
+          <div class="bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50 absolute inset-0 pointer-events-none"></div>
+  
+          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">Dev</span>
+        </a>
+        <!-- image - end -->
+  
+        <!-- image - start -->
+        <a href="#" class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+  
+          <div class="bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50 absolute inset-0 pointer-events-none"></div>
+  
+          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">Retro</span>
+        </a>
+        <!-- image - end -->
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-auto sm:justify-center sm:items-center">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="#" class="hover:underline">Spark Youth Robotics Club</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0 sm:mt-16 sm:mb-16">
+        <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6 ">Gallery</a>
+        </li>
+        <li>
+            <a href="/root/contact.html" class="hover:underline">Contact</a>
+        </li>
+    </ul>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.4252034279993!2d-75.91168018436609!3d45.34022834972786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd1ff36fdc72f51%3A0x41176f540e9876bf!2sHub350!5e0!3m2!1sen!2sca!4v1670337325991!5m2!1sen!2sca" class="translate-y-8 sm:translate-y-0 sm:justify-center sm:items-center" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </footer>
+
+  <!-- back to top -->
+  <button id="to-top-button" onclick="goToTop()" title="Go To Top"
+  class="hidden fixed z-90 bottom-20 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-transparent text-white text-3xl font-bold animate-pulse">&uarr;</button>
+
+  <!-- index.js link -->
+  <script src="JS/index.js"></script>
+
+  <!-- flowbite javascript installation -->
+  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+
+  <!-- AOS javascript intallation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true});
+  </script>
+
+  <!-- magic mouse cursor-->
+  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+  <script type="text/javascript">
+    options = {
+  "cursorOuter": "circle-basic",
+  "hoverEffect": "circle-move",
+  "hoverItemMove": false,
+  "defaultCursor": false,
+  "outerWidth": 30,
+  "outerHeight": 30
+      };
+    magicMouse(options);
+  </script>
+</body>
+</html>
