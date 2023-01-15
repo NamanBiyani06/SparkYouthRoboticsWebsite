@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap" rel="stylesheet">
@@ -35,9 +36,9 @@
 
 <body class="flex flex-col min-h-screen">
   <!-- navigation bar -->
-  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50">
+  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50" >
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-      <a href="#" class="flex items-center">
+      <a href="/root/index.html" class="flex items-center" data-aos="fade-right" data-aos-duration="1000">
         <img src="Images/syrcLogo.png" class="h-6 mr-3 sm:h-10" alt="SYRC Logo"/>
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Team 8729</span>
       </a>
@@ -47,50 +48,55 @@
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
       </button>
       
-      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown" data-aos="fade-down" data-aos-duration="1000">
         <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium  bg-opacity-20 backdrop-blur-lg">
           <li>
-            <a href="/root/index.html" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+            <a href="/root/index.html" class="block py-2 pl-3 pr-4 text-gray-400 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-gray-400 dark:bg-blue-600 md:dark:bg-transparent hover:text-white" aria-current="page">Home</a>
           </li>
           <li>
-              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Subteams <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Subteams <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
               <!-- Dropdown menu -->
               <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                   <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
+                      <a href="/root/software.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
+                      <a href="/root/mechanical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
+                      <a href="/root/electrical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
+                      <a href="/root/outreach.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
                     </li>
                   </ul>
                   <div class="py-1">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Gallery</a>
+                    <a href="/root/team-structure.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Team Structure</a>
                   </div>
               </div>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
+            <a href="/root/events.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sponsors</a>
+            <a href="/root/gallery.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+            <a href="/root/sponsors.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sponsors</a>
+          </li>
+          <li>
+            <a href="/root/contact.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sparkyouthrobotics/"><i class="scale-150 fa fa-instagram fa-2xl fa-inverse"></i></a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
   <!-- header -->
-  <section class="bg-white dark:bg-gray-900" data-aos="fade-up" data-aos-duration="1500">
+  <section class="bg-transparent" data-aos="fade-up" data-aos-duration="1500">
     <div class="mt-16 grid h-screen flex px-4 justify-center py-8 mx-auto lg:py-16 center" >
       <div class= "mr-auto place-self-center translate-y-16">
         <h1 class = "justify-center text-transparent bg-clip-text mb-4 text-4xl -tight leading-none md:text-5xl lg:text-6xl text-center font-code translate-y-3">
@@ -138,17 +144,17 @@
       <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
         <div>
           <div class="h-64 md:h-auto bg-gray-100 overflow-hidden rounded-lg shadow-lg">
-            <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600&h=750" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center"/>
+            <img src="/root/Images/Software/code.png" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center"/>
           </div>
         </div>
   
-        <div class="md:pt-8 items-center lg:translate-y-16">
-          <h1 class="text-white text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 md:mb-6">Our competitive advantage</h1>
+        <div class="md:pt-8 items-center">
+          <h1 class="text-white text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 md:mb-6">What we do</h1>
   
           <p class="text-gray-300 sm:text-lg mb-6 md:mb-8">
-            This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated. It may be used to display a sample of fonts or generate text for testing. Filler text is dummy text which has no meaning however looks very similar to real text.<br /><br />
+            The software subteam in Spark Youth Robotics Club a critical role in designing and implementing the control systems for the robot. One of the key tools that this subteam may use is WPIlib, a software library developed by Worcester Polytechnic Institute (WPI) for use in the FIRST Robotics Competition. WPIlib provides a wide range of functionality for controlling the robot's motors, sensors, and other devices, as well as for developing user interfaces and other software components.<br /><br />
   
-            This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is <a href="#" class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 underline transition duration-100">random</a> or otherwise generated. It may be used to display a sample of fonts or generate text for testing. Filler text is dummy text which has no meaning however looks very similar to real text.
+            The software subteam is responsible for creating the code that tells the robot what to do and how to respond to different situations. This requires a deep understanding of the robot's hardware, as well as the rules of the competition and the strategies the team wants to employ. The subteam members will collaborate closely with the mechanical subteam, using WPIlib to develop the software that controls the robot's various subsystems. They will also spend a lot of time testing and refining their code, to ensure that the robot performs well on the field.
           </p>
         </div>
       </div>
@@ -171,25 +177,25 @@
         <!-- article - start -->
         <div class="flex flex-col bg-gray-800 rounded-lg overflow-hidden hover:scale-105 transition duration-300">
           <a href="#" class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
+            <img src="/root/Images/Software/commandbased.png" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
           </a>
   
           <div class="flex flex-col flex-1 p-4 sm:p-6">
             <h2 class="text-white text-lg font-semibold mb-2">
-              <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">Command-Based Programming</a>
+              <a class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">Command-Based Programming</a>
             </h2>
   
-            <p class="text-white mb-4">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+            <p class="text-white mb-4">Command Based Programming is a method of programming that will help us modulate and experiment much faster with code. We will start using CBP in the 2024 season.</p>
   
             <div class="flex justify-between items-end mt-auto">
               <div class="flex items-center gap-2">
                 <div class="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1611898872015-0571a9e38375?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
+                  <img src="/root/Images/Software/pfp.png" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
                 </div>
   
                 <div>
-                  <span class="block text-white">Mike Lane</span>
-                  <span class="block text-gray-300 text-sm">July 19, 2021</span>
+                  <span class="block text-white">Ariel Liu</span>
+                  <span class="block text-gray-300 text-sm">Coordinator</span>
                 </div>
               </div>
             </div>
@@ -199,8 +205,8 @@
   
         <!-- article - start -->
         <div class="flex flex-col bg-gray-800 rounded-lg overflow-hidden hover:scale-105 transition duration-300">
-          <a href="#" class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
+          <a class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
+            <img src="/root/Images/Software/robotsimulation.png" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
           </a>
   
           <div class="flex flex-col flex-1 p-4 sm:p-6">
@@ -208,17 +214,17 @@
               <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">Robot Simulation</a>
             </h2>
   
-            <p class="text-white mb-4">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+            <p class="text-white mb-4">Robot Simulation allows the software team to test out software without having the physical robot on hand. This allows us to find bugs before contest dates!</p>
   
             <div class="flex justify-between items-end mt-auto">
               <div class="flex items-center gap-2">
                 <div class="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1611898872015-0571a9e38375?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
+                  <img src="/root/Images/Software/pfp.png" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
                 </div>
   
                 <div>
-                  <span class="block text-white">Mike Lane</span>
-                  <span class="block text-gray-300 text-sm">July 19, 2021</span>
+                  <span class="block text-white">Naman Biyani</span>
+                  <span class="block text-gray-300 text-sm">Coordinator</span>
                 </div>
               </div>
             </div>
@@ -228,8 +234,8 @@
   
         <!-- article - start -->
         <div class="flex flex-col bg-gray-800 rounded-lg overflow-hidden hover:scale-105 transition duration-300">
-          <a href="#" class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
+          <a class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
+            <img src="/root/Images/Software/trajectorytracking.png" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
           </a>
   
           <div class="flex flex-col flex-1 p-4 sm:p-6">
@@ -237,17 +243,17 @@
               <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">Trajectory Tracking</a>
             </h2>
   
-            <p class="text-white mb-4">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+            <p class="text-white mb-4">Trajectory Tracking, when combined with the correct simulation methods, is a brilliant way to plan trajectories for both the autonomous and tele-operated segments.</p>
   
             <div class="flex justify-between items-end mt-auto">
               <div class="flex items-center gap-2">
                 <div class="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1611898872015-0571a9e38375?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
+                  <img src="/root/Images/Software/pfp.png" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
                 </div>
   
                 <div>
-                  <span class="block text-white">Mike Lane</span>
-                  <span class="block text-gray-300 text-sm">July 19, 2021</span>
+                  <span class="block text-white">Ethan and Angela</span>
+                  <span class="block text-gray-300 text-sm">Coordinators</span>
                 </div>
               </div>
             </div>
@@ -257,8 +263,8 @@
   
         <!-- article - start -->
         <div class="flex flex-col bg-gray-800 rounded-lg overflow-hidden hover:scale-105 transition duration-300">
-          <a href="#" class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
+          <a class="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
+            <img src="/root/Images/Software/rgblighting.png" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute"/>
           </a>
   
           <div class="flex flex-col flex-1 p-4 sm:p-6">
@@ -266,17 +272,17 @@
               <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">RGB Lighting</a>
             </h2>
   
-            <p class="text-white mb-4">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+            <p class="text-white mb-4">Although RGB will not affect our robot in a tangible sense, it will allow for the drive team to see the robot better on the field. It also looks really cool!</p>
   
             <div class="flex justify-between items-end mt-auto">
               <div class="flex items-center gap-2">
                 <div class="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1611898872015-0571a9e38375?auto=format&q=75&fit=crop&w=64" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
+                  <img src="/root/Images/Software/pfp.png" loading="lazy" alt="Photo by Brock Wegner" class="w-full h-full object-cover object-center" />
                 </div>
   
                 <div>
-                  <span class="block text-white">Mike Lane</span>
-                  <span class="block text-gray-300 text-sm">July 19, 2021</span>
+                  <span class="block text-white">Raihaan D.</span>
+                  <span class="block text-gray-300 text-sm">Coordinator</span>
                 </div>
               </div>
             </div>
@@ -301,41 +307,41 @@
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 xl:gap-8 mb-4 md:mb-8">
         <!-- image - start -->
         <a href="#" class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
-          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+          <img src="/root/Images/Software/gallery-1.png" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
   
           <div class="bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50 absolute inset-0 pointer-events-none"></div>
   
-          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">VR</span>
+          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">WPILib</span>
         </a>
         <!-- image - end -->
   
         <!-- image - start -->
-        <a href="#" class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
-          <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Magicle" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+        <a class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
+          <img src="/root/Images/Software/gallery-3.png" loading="lazy" alt="Photo by Magicle" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
   
           <div class="bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50 absolute inset-0 pointer-events-none"></div>
   
-          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">Tech</span>
+          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">Coding</span>
         </a>
         <!-- image - end -->
   
         <!-- image - start -->
-        <a href="#" class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
-          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+        <a class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
+          <img src="/root/Images/Software/gallery-2.png" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
   
           <div class="bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50 absolute inset-0 pointer-events-none"></div>
   
-          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">Dev</span>
+          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">Collaboration</span>
         </a>
         <!-- image - end -->
   
         <!-- image - start -->
-        <a href="#" class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
-          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+        <a class="group h-48 md:h-80 flex items-end bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
+          <img src="/root/Images/Software/gallery-4.png" loading="lazy" alt="Photo by Lorenzo Herrera" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
   
           <div class="bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50 absolute inset-0 pointer-events-none"></div>
   
-          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">Retro</span>
+          <span class="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">Software Meetings</span>
         </a>
         <!-- image - end -->
       </div>
