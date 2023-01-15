@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Spark Youth Robotics Club</title>
   <link rel="stylesheet" href="CSS/style.css">
-  <link rel="icon" href="/root/Images/syrcLogo.png">
+  <link rel="icon" href="/root/Images/syrcLogo.png" class="w-auto h-auto">
   
 
   <!-- installations -->
@@ -14,21 +14,19 @@
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- tailwind configuration -->
 </head>
 
-
 <body class="flex flex-col min-h-screen">
-  <!-- custom cursor -->
-  <!--<div class="curzr" hidden></div>-->
-
-  
-  <!-- navigation bar -->
+  <!-- cursor -->
   <div id="circularcursor"></div>
-  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50">
+
+  <!-- navigation bar -->
+  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50" >
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-      <a href="#" class="flex items-center">
+      <a href="/root/index.html" class="flex items-center" data-aos="fade-right" data-aos-duration="1000">
         <img src="Images/syrcLogo.png" class="h-6 mr-3 sm:h-10" alt="SYRC Logo"/>
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Team 8729</span>
       </a>
@@ -38,7 +36,7 @@
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
       </button>
       
-      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown" data-aos="fade-down" data-aos-duration="1000">
         <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium  bg-opacity-20 backdrop-blur-lg">
           <li>
             <a href="/root/index.html" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
@@ -49,20 +47,20 @@
               <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                   <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
+                      <a href="/root/software.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
+                      <a href="/root/mechanical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
+                      <a href="/root/electrical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
+                      <a href="/root/outreach.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
                     </li>
                   </ul>
                   <div class="py-1">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Gallery</a>
+                    <a href="/root/team-structure.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Team Structure</a>
                   </div>
               </div>
           </li>
@@ -70,10 +68,16 @@
             <a href="/root/events.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
           </li>
           <li>
+            <a href="/root/gallery.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
+          </li>
+          <li>
             <a href="/root/sponsors.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sponsors</a>
           </li>
           <li>
             <a href="/root/contact.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sparkyouthrobotics/"><i class="scale-150 fa fa-instagram fa-2xl fa-inverse"></i></a>
           </li>
         </ul>
       </div>
@@ -81,11 +85,11 @@
   </nav>
 
   <!-- header -->
-  <section class="bg-white dark:bg-gray-900" data-aos="fade-up" data-aos-duration="1500">
+  <section class="bg-transparent dark:bg-transparent" data-aos="fade-up" data-aos-duration="1500">
     <div class="mt-16 grid h-screen flex justify-center items-center px-4 py-8 mx-auto lg:py-16 center" >
       <div class="mr-auto place-self-center">
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">We are</h1>
-        <h1 class = "justify-center text-transparent bg-clip-text mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        <h1 class = "justify-center text-transparent bg-clip-text mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-center bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E]">
           <a href="" class="typewrite" data-period="2000" data-type='[ "Spark Youth Robotics Club.", "Builders.", "Teenagers.", "Dreamers." ]'>
             <span class="wrap"></span>
           </a>
@@ -105,14 +109,14 @@
   </section>
 
   <!-- about us -->
-  <section class="bg-white dark:bg-gray-900" data-aos="fade-right" data-aos-duration="3000">
+  <section class="bg-transparent" data-aos="fade-right" data-aos-duration="3000">
     <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
       <img class="w-full dark:hidden" src="Images/syrcLogo.png" alt="dashboard image">
       <img class="w-full hidden dark:block" src="Images/syrcLogo.png" alt="dashboard image">
       <div class="mt-4 md:mt-0">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">About Us</h2>
           <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">We're Spark Youth Robotics Club. A FIRST Robotics Team based in the Ottawa Valley made of big dreamers. From participating in robotics competitions to hosting coding workshops, our goal is to create opportunities for all students to delve into robotics and learn new skills.</p>
-          <a href="#" class="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm  py-2.5 text-center dark:focus:ring-primary-900">
+          <a href="/root/gallery.html" class="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm  py-2.5 text-center dark:focus:ring-primary-900 hover:text-blue-400 transition transition-duration-400 duration-400">
               Our Photo Gallery
               <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
           </a>
@@ -120,28 +124,31 @@
     </div>
   </section>
 
+  <section class="text-center text-white ">
+  </section>
+
   <!-- our story -->
 
   <!-- what is first -->
-  <section class="bg-white dark:bg-gray-900" data-aos="fade-left" data-aos-duration="3000">
+  <section class="bg-transparent" data-aos="fade-left" data-aos-duration="3000">
     <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
         <div class="mt-4 md:mt-0">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">What is FIRST Robotics?</h2>
           <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">FIRST Robotics Competition (FRC) is an international high school robotics competition. Each year, teams of high school students, coaches, and mentors work during a six-week period to build robots capable of competing in that year's game that weigh up to 57 kilograms. Robots complete tasks such as scoring balls into goals, placing inner tubes onto racks, hanging on bars, and balancing robots on balance beams. The game, along with the required set of tasks, changes annually.</p>
-          <a href="https://www.firstinspires.org/robotics/frc" class="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm  py-2.5 text-center dark:focus:ring-primary-900">
+          <a href="https://www.firstinspires.org/robotics/frc" class="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm  py-2.5 text-center dark:focus:ring-primary-900 hover:text-blue-400 transition transition-duration-400 duration-400">
               FIRST Official
               <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
           </a>
       </div>
-      <img class="w-full dark:hidden" src="Images/FIRSTRobotics.png" alt="dashboard image">
-      <img class="w-full hidden dark:block" src="Images/FIRSTRobotics.png" alt="dashboard image">
+      <img class="w-full dark:hidden" src="Images/Index/FIRSTRobotics.png" alt="dashboard image">
+      <img class="w-full hidden dark:block" src="Images/Index/FIRSTRobotics.png" alt="dashboard image">
     </div>
   </section>
 
   <!-- divider -->
   <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700">
 
-  <section class="bg-white dark:bg-gray-900">
+  <section class="bg-transparent">
     <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
         <dl class="grid max-w-screen-md gap-8 mx-auto text-gray-900 sm:grid-cols-3 dark:text-white">
             <div class="flex flex-col items-center justify-center">
@@ -153,7 +160,7 @@
                 <dd class="font-light text-gray-500 dark:text-gray-400">Mentors</dd>
             </div>
             <div class="flex flex-col items-center justify-center">
-                <dt class="mb-2 text-3xl md:text-4xl font-extrabold">8</dt>
+                <dt class="mb-2 text-3xl md:text-4xl font-extrabold">3</dt>
                 <dd class="font-light text-gray-500 dark:text-gray-400">Workshops Hosted</dd>
             </div>
         </dl>
@@ -164,7 +171,7 @@
   <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700">
 
   <!-- our subteams -->
-  <section class="bg-white dark:bg-gray-900" data-aos="fade-up" data-aos-duration="3000">
+  <section class="bg-transparent" data-aos="fade-up" data-aos-duration="3000">
     <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-2 mb-8">
       <!-- our subteams header -->
       <div class="mx-auto max-w-screen-sm text-center">
@@ -172,11 +179,12 @@
       </div>
 
       <div class="group grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-2 text-white items-center place-items-center mt-16 flex-col">
+
         <!-- software card-->
-        <div class="col-span-1 transition grayscale hover:grayscale-0 hover:duration-400 scale-x-90">
+        <div class="col-span-1 mb-8 lg:mb-0 transition grayscale hover:grayscale-0 hover:duration-400 scale-x-90">
           <figure class="relative max-w-sm h-[32rem] transition-all duration-300 cursor-pointer filter  mb-2 place-items-center">
-            <a href="#">
-              <img class="rounded-lg object-none w-full h-full" src="Images/cardPictures/softwareCard.webp" alt="image description">
+            <a href="/root/software.html">
+              <img class="rounded-lg object-none w-full h-full" src="Images/Index/softwareCard.webp" alt="image description">
             </a>
             <figcaption class="text-white justify-center bg-clip-text mb-4 font-extrabold tracking-tight leading-none text-5xl text-center -rotate-90 -translate-y-72 px-full">
                 <p>SOFTWARE</p>
@@ -185,10 +193,10 @@
         </div>
        
         <!-- mechanical card -->
-        <div class="col-span-1 transition grayscale hover:grayscale-0 hover:duration-400 scale-x-90">
+        <div class="col-span-1 mb-8 lg:mb-0 transition grayscale hover:grayscale-0 hover:duration-400 scale-x-90">
           <figure class="relative max-w-sm h-[32rem] transition-all duration-300 cursor-pointer filter  mb-2 place-items-center">
-            <a href="#">
-              <img class="rounded-lg object-none w-full h-full" src="Images/cardPictures/mechanicalCard.jpg" alt="image description">
+            <a href="/root/mechanical.html">
+              <img class="rounded-lg object-none w-full h-full" src="Images/Index/mechanicalCard.jpg" alt="image description">
             </a>
             <figcaption class="text-white justify-center bg-clip-text mb-4 font-extrabold tracking-tight leading-none text-5xl text-center -rotate-90 -translate-y-72 px-full">
                 <p>MECHANICAL</p>
@@ -199,8 +207,8 @@
         <!-- electrical card -->
         <div class="col-span-1 transition grayscale hover:grayscale-0 hover:duration-400 scale-x-90">
           <figure class="relative max-w-sm h-[32rem] transition-all duration-300 cursor-pointer filter  mb-2 place-items-center">
-            <a href="#">
-              <img class="rounded-lg object-none w-full h-full" src="Images/cardPictures/electricalCard.jpg" alt="image description">
+            <a href="/root/electrical.html">
+              <img class="rounded-lg object-none w-full h-full" src="Images/Index/electricalCard.jpg" alt="image description">
             </a>
             <figcaption class="text-white justify-center bg-clip-text mb-4 font-extrabold tracking-tight leading-none text-5xl text-center -rotate-90 -translate-y-72 px-full">
                 <p>ELECTRICAL</p>
@@ -211,8 +219,8 @@
         <!-- outreach card -->
         <div class="col-span-1 transition grayscale hover:grayscale-0 hover:duration-400 scale-x-90">
           <figure class="relative max-w-sm h-[32rem] transition-all duration-300 cursor-pointer filter  mb-2 place-items-center">
-            <a href="#">
-              <img class="rounded-lg object-none w-full h-full" src="Images/cardPictures/outreachCard.jpg" alt="image description">
+            <a href="/root/outreach.html">
+              <img class="rounded-lg object-none w-full h-full" src="Images/Index/outreachCard.jpg" alt="image description">
             </a>
             <figcaption class="text-white justify-center bg-clip-text mb-4 font-extrabold tracking-tight leading-none text-5xl text-center -rotate-90 -translate-y-72 px-full">
                 <p>OUTREACH</p>
@@ -224,10 +232,10 @@
   </section>
 
   <!-- divider -->
-  <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700">
+  <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700">
 
   <!-- our sponsors -->
-  <section class="bg-white dark:bg-gray-900" data-aos="fade-up" data-aos-duration="3000">
+  <section class="bg-transparent" data-aos="fade-up" data-aos-duration="3000">
     <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-2 mb-8">
       <!-- our sponsors subheader -->
       <div class="mx-auto max-w-screen-sm text-center">
@@ -235,28 +243,28 @@
       </div>
 
       <!-- collage -->
-      <div class="grayscale grid text-white lg:gap-12 md:gap-8 sm:gap-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 overflow-x-hidden flex place-items-center">
+      <div class="mt-10 mb-10 grayscale grid text-white lg:gap-12 md:gap-8 sm:gap-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 overflow-x-hidden flex place-items-center bg-blue-300 rounded-lg">
         <div>
-          <img src="/root/Images/sponsorLogos/CIBC-Logo.png" alt="">
+          <img src="/root/Images/Sponsors/CIBC-Logo.png" alt="">
         </div>
         <div class="invert">
-          <img src="/root/Images/sponsorLogos/CarletonLogo.png" alt="">
+          <img src="/root/Images/Sponsors/CarletonLogo.png" alt="">
         </div>
-        <div class="md:pb-0 lg:pb-0 sm:pb-16">
-          <img src="/root/Images/sponsorLogos/RossVideoLogo.webp" alt="">
+        <div class="mb-32 md:mb-0 lg:mb-0 sm:mb-16">
+          <img src="/root/Images/Sponsors/RossVideoLogo.webp" alt="">
         </div>
         <div class="invert">
-          <img src="/root/Images/sponsorLogos/CoastalReignLogo.png" alt="">
+          <img src="/root/Images/Sponsors/CoastalReignLogo.png" alt="">
         </div>
       </div>
-      <button type="button" class="w-full px-8 py-3 font-semibold rounded-full dark:bg-gray-100 dark:text-gray-800 hover:scale-105 hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 transition-all duration-700">Interested in Sponsoring?</button>
+      <button href="https://forms.gle/FQvMNh9FFYuh3kYY8" type="button" class="w-full px-8 py-3 font-semibold rounded-full dark:bg-gray-300 dark:text-gray-800 hover:scale-95 hover:bg-white via-fuchsia-500 to-indigo-500 transition-all duration-700">Interested in Sponsoring?</button>
     </div>
   </section>
 
   <!-- divider -->
   <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700 mb-32">
 
-  <section class="dark:bg-gray-900 dark:text-gray-100">
+  <section class="bg-transparent dark:text-gray-100" data-aos="fade-up" data-aos-duration="1500">
     <!-- our testimonials subheader -->
     <div class="mx-auto max-w-screen-sm text-center">
       <h2 class="text-5xl tracking-tight font-extrabold leading-tight text-white bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">Testimonials from our Team</h2>
@@ -265,51 +273,58 @@
     <div class="container px-6 py-12 mx-auto">
       <div class="grid items-center gap-4 xl:grid-cols-5">
         <div class="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
-          <h2 class="text-4xl font-bold">Duo assum utroque appetere an</h2>
-          <p class="dark:text-gray-400">Pri ex magna scaevola moderatius. Nullam accommodare no vix, est ei diceret alienum, et sit cetero malorum. Et sea iudico consequat, est sanctus adipisci ex.</p>
+          <h2 class="text-4xl font-bold">
+            <p>Everyone can benefit from</p>
+            <span></span>
+            <span class="relative inline-flex sm:inline">
+              <span class="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-70 scale-y-90 w-full h-full absolute inset-0"></span>
+              <span class="relative"> Spark Youth Robotics </span>
+            </span>
+          </h2>
+          <p class="dark:text-gray-400">Our members have always been driven and passionate to learn. SYRC plays it's part in the community by continually supporting people wanting to get involved.</p>
         </div>
         <div class="p-6 xl:col-span-3">
           <div class="grid gap-4 md:grid-cols-2">
             <div class="grid content-center gap-4">
-              <div class="p-6 rounded shadow-md dark:bg-gray-900">
-                <p>Man I love SYRC</p>
+              <div class="p-6 rounded-lg shadow-lg dark:bg-gray-800 hover:scale-105 transition duration-700 ease-in-out transition-duration-700">
+                <p>The team at SYRC is second to none, with everyone always having a positive attitude towards whatever the team's current mission is. </p>
                 <div class="flex items-center mt-4 space-x-4">
                   <img src="https://source.unsplash.com/50x50/?portrait?1" alt="" class="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500">
                   <div>
                     <p class="text-lg font-semibold">Evan Liu</p>
-                    <p class="text-sm dark:text-gray-400">CTO of Company Co.</p>
+                    <p class="text-sm dark:text-gray-400">Electical Co-Lead</p>
                   </div>
                 </div>
               </div>
-              <div class="p-6 rounded shadow-md dark:bg-gray-900">
-                <p>SYRC is the bombbbb 💣💣💣💣💣</p>
+              <div class="p-6 rounded-lg shadow-lg dark:bg-gray-800 hover:scale-105 transition duration-700 ease-in-out transition-duration-700">
+                <p>I have always been incredibly interested in the world of engineering. SYRC has been the perfect place for me to grow and develop my skills.</p>
                 <div class="flex items-center mt-4 space-x-4">
                   <img src="https://source.unsplash.com/50x50/?portrait?2" alt="" class="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500">
                   <div>
-                    <p class="text-lg font-semibold">Evan Liu</p>
-                    <p class="text-sm dark:text-gray-400">Electrical Lead</p>
+                    <p class="text-lg font-semibold">Rahul Vedula</p>
+                    <p class="text-sm dark:text-gray-400">Software Member</p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="grid content-center gap-4">
-              <div class="p-6 rounded shadow-md dark:bg-gray-900">
-                <p>I am Gustavo Fring</p>
+              <div class="p-6 rounded-lg shadow-lg dark:bg-gray-800 hover:scale-105 transition duration-700 ease-in-out transition-duration-700">
+                <p>SYRC has changed the way I look at the world. With the helpful leads and passionate members, anything is possible.</p>
                 <div class="flex items-center mt-4 space-x-4">
                   <img src="https://source.unsplash.com/50x50/?portrait?3" alt="" class="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500">
                   <div>
-                    <p class="text-lg font-semibold">Evan 'gus' Liu</p>
-                    <p class="text-sm dark:text-gray-400">CTO of Regional Methemphetamine Dealership</p>
+                    <p class="text-lg font-semibold">Nirdev Paul</p>
+                    <p class="text-sm dark:text-gray-400">Mechanical Member</p>
                   </div>
                 </div>
               </div>
-              <div class="p-6 rounded shadow-md dark:bg-gray-900">
-                <p>Say my name</p>
+              <div class="p-6 rounded-lg shadow-lg dark:bg-gray-800 hover:scale-105 transition duration-700 ease-in-out transition-duration-700">
+                <p>It's really great to be able to see the positive impact SYRC makes on our local society through our workshops and robot demonstrations.</p>
                 <div class="flex items-center mt-4 space-x-4">
                   <img src="https://source.unsplash.com/50x50/?portrait?4" alt="" class="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500">
                   <div>
-                    <p class="text-lg font-semibold">Evan 'heisenberg' Liu</p>
-                    <p class="text-sm dark:text-gray-400">Chemistry Teacher</p>
+                    <p class="text-lg font-semibold">Aarya Bhatt</p>
+                    <p class="text-sm dark:text-gray-400">Outreach Member</p>
                   </div>
                 </div>
               </div>
@@ -321,22 +336,22 @@
   </section>
 
   <!-- footer -->
-  <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-auto">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline">Spark Youth Robotics Club</a>. All Rights Reserved.
+  <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-auto sm:justify-center sm:items-center">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="#" class="hover:underline">Spark Youth Robotics Club</a>. All Rights Reserved.
     </span>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.4252034279993!2d-75.91168018436609!3d45.34022834972786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd1ff36fdc72f51%3A0x41176f540e9876bf!2sHub350!5e0!3m2!1sen!2sca!4v1670337325991!5m2!1sen!2sca" class="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <ul class="flex flex-wrap mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0 sm:mt-16 sm:mb-16">
         <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+            <a href="/root/gallery.html" class="mr-4 hover:underline md:mr-6 ">Gallery</a>
         </li>
         <li>
             <a href="/root/contact.html" class="hover:underline">Contact</a>
         </li>
     </ul>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.4252034279993!2d-75.91168018436609!3d45.34022834972786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd1ff36fdc72f51%3A0x41176f540e9876bf!2sHub350!5e0!3m2!1sen!2sca!4v1670337325991!5m2!1sen!2sca" class="translate-y-8 sm:translate-y-0 sm:justify-center sm:items-center" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </footer>
 
-
-  <div id="toast-default" class="m-8 scale-110 mr-16 fixed right-5 bottom-5 flex items-center p-4 w-full max-w-xs text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+  <!-- ask for cookies -->
+  <div id="toast-default" class="m-8 scale-110 mr-16 fixed right-5 bottom-5 flex items-center p-4 w-full max-w-xs text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert" data-aos="fade-up" data-aos-duration="700">
     <div class="inline-flex flex-shrink-0 justify-center items-center w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:bg-blue-800 dark:text-blue-200">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
@@ -363,9 +378,10 @@
   <!-- AOS javascript intallation -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({once:true});
   </script>
 
+  <!-- magic mouse javascript installation -->
   <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
   <script type="text/javascript">
     options = {
@@ -376,7 +392,18 @@
 	"outerWidth": 30,
 	"outerHeight": 30
       };
-    magicMouse(options);
+    magicMouse(options); 
+  </script>
+
+  <!-- preloader -->
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  
+  <script>
+    $(window).on("load", function() {
+      $(".loader-wrapper").fadeOut("slow");
+    });
   </script>
 </body>
 </html>
