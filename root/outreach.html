@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spark Youth Robotics Club</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" href="/root/Images/syrcLogo.png">
+
+  <!-- installations -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- tailwind configuration -->
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <!-- navigation bar -->
+  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50" >
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="/root/index.html" class="flex items-center" data-aos="fade-right" data-aos-duration="1000">
+        <img src="Images/syrcLogo.png" class="h-6 mr-3 sm:h-10" alt="SYRC Logo"/>
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Team 8729</span>
+      </a>
+      
+      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      
+      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown" data-aos="fade-down" data-aos-duration="1000">
+        <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium  bg-opacity-20 backdrop-blur-lg">
+          <li>
+            <a href="/root/index.html" class="block py-2 pl-3 pr-4 text-gray-400 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-gray-400 dark:bg-blue-600 md:dark:bg-transparent hover:text-white" aria-current="page">Home</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Subteams <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="/root/software.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
+                    </li>
+                    <li>
+                      <a href="/root/mechanical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
+                    </li>
+                    <li>
+                      <a href="/root/electrical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
+                    </li>
+                    <li>
+                      <a href="/root/outreach.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="/root/team-structure.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Team Structure</a>
+                  </div>
+              </div>
+          </li>
+          <li>
+            <a href="/root/events.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
+          </li>
+          <li>
+            <a href="/root/gallery.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
+          </li>
+          <li>
+            <a href="/root/sponsors.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sponsors</a>
+          </li>
+          <li>
+            <a href="/root/contact.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sparkyouthrobotics/"><i class="scale-150 fa fa-instagram fa-2xl fa-inverse"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- header -->
+  <section class="px-16 sm:px-24 md:px-32 lg:px-40 mt-32 lg:h-screen">
+    <div class="flex flex-wrap justify-between mb-8 md:mb-16">
+      <div class="w-full lg:w-1/2 flex flex-col justify-center lg:pt-48 lg:pb-24 mb-6 sm:mb-12 lg:mb-0">
+        <h1 class="text-white text-6xl sm:text-5xl md:text-6xl font-bold mb-2 md:mb-4">This is</h1>
+
+        <h1 class = "text-transparent bg-clip-text mb-4 text-7xl font-extrabold tracking-tight leading-none md:text-8xl lg:text-7xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Outreach</h1>
+
+        <p class="max-w-md text-gray-500 xl:text-lg leading-relaxed">This is a section of some simple filler text, also known as placeholder text. It shares characteristics of real text.</p>
+      </div>
+
+      <div class="w-auto lg:w-1/2 flex mb-12 md:mb-16 scale-105">
+        <div class="hover:scale-105 hover:-translate-x-2 hover:translate-y-2 transition duration-700 bg-gray-100 rounded-lg shadow-lg overflow-hidden relative z-10 top-12 md:top-16 left-12 md:left-16 -ml-12 lg:ml-0">
+          <img src="/root/Images/Outreach/pins.png" loading="lazy" alt="Photo by Kaung Htet" class="w-full h-full object-cover object-center" />
+        </div>
+
+        <div class="hover:scale-105 hover:translate-x-4 hover:-translate-y-2 transition duration-700 bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+          <img src="/root/Images/Outreach/mascot.png" loading="lazy" alt="Photo by Manny Moreno" class="w-full h-full object-cover object-center" />
+        </div>
+      </div>
+    </div>
+
+    <!-- divider with downwards arrow -->
+    <div class="inline-flex justify-center items-center w-full translate-y-8 mb-8 lg:mb-0">
+      <hr class=" w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700">
+      <div class="absolute left-1/2 px-4 bg-white -translate-x-1/2 dark:bg-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="animate-bounce w-9 h-9 text-gray-700 dark:text-gray-300">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+        </svg>      
+      </div>
+    </div>
+  </section>
+
+  <!-- who is outreach? -->
+  <section class="bg-transparent mb-16" data-aos="fade-right" data-aos-duration="3000">
+    <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-0 lg:px-6">
+      <img class="w-full dark:hidden" src="/root/Images/Outreach/OutreachEvent.jpg" alt="dashboard image">
+      <img class="w-full hidden dark:block rounded-lg inset-0 hover:scale-105 transition transition-duration-700 ease-in-out duration-700" src="/root/Images/Outreach/OutreachEvent.jpg" alt="dashboard image">
+      <div class="mt-4 md:mt-0">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">The Outreach Subteam</h2>
+        <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">We're Spark Youth Robotics Club. A FIRST Robotics Team based in the Ottawa Valley made of big dreamers. From participating in robotics competitions to hosting coding workshops, our goal is to create opportunities for all students to delve into robotics and learn new skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- outreach gallery -->
+  <section class="px-8 sm:px-16 md:px-32 lg:px-64 mb-16">
+
+    <div class="mx-auto max-w-screen-sm text-center mb-10 mt-24">
+      <h2 class="text-4xl tracking-tight font-extrabold leading-tight text-white bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 font-code">Outreach Gallery</h2>
+    </div>
+
+    <div id="indicators-carousel" class="relative rounded-lg" data-carousel="static">
+      <!-- Carousel wrapper -->
+      <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+              <img src="/root/Images/Outreach/workshop.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg" alt="...">
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="/root/Images/Outreach/workpace.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg" alt="...">
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="/root/Images/Outreach/OutreachEvent.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg" alt="...">
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="/root/Images/Outreach/paintingEven.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg" alt="...">
+          </div>
+          <!-- Item 5 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="/root/Images/Outreach/pins.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg" alt="...">
+          </div>
+      </div>
+
+      <!-- Slider indicators -->
+      <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+      </div>
+
+      <!-- Slider controls -->
+      <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none bg-gray-600 bg-opacity-60" data-carousel-prev>
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-900/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+              <span class="sr-only">Previous</span>
+          </span>
+      </button>
+      <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none  bg-gray-600 bg-opacity-60" data-carousel-next>
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-900/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              <span class="sr-only">Next</span>
+          </span>
+      </button>
+    </div>
+  </section>
+
+
+  <!-- footer -->
+  <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-auto sm:justify-center sm:items-center">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="#" class="hover:underline">Spark Youth Robotics Club</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0 sm:mt-16 sm:mb-16">
+        <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6 ">Gallery</a>
+        </li>
+        <li>
+            <a href="/root/contact.html" class="hover:underline">Contact</a>
+        </li>
+    </ul>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.4252034279993!2d-75.91168018436609!3d45.34022834972786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd1ff36fdc72f51%3A0x41176f540e9876bf!2sHub350!5e0!3m2!1sen!2sca!4v1670337325991!5m2!1sen!2sca" class="translate-y-8 sm:translate-y-0 sm:justify-center sm:items-center" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </footer>
+
+  <!-- back to top -->
+  <button id="to-top-button" onclick="goToTop()" title="Go To Top"
+  class="hidden fixed z-90 bottom-20 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-transparent text-white text-3xl font-bold animate-pulse">&uarr;</button>
+
+  <!-- index.js link -->
+  <script src="JS/index.js"></script>
+
+  <!-- flowbite javascript installation -->
+  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+
+  <!-- AOS javascript intallation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true});
+  </script>
+
+  <!-- magic mouse cursor-->
+  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+  <script type="text/javascript">
+    options = {
+  "cursorOuter": "circle-basic",
+  "hoverEffect": "circle-move",
+  "hoverItemMove": false,
+  "defaultCursor": false,
+  "outerWidth": 30,
+  "outerHeight": 30
+      };
+    magicMouse(options);
+  </script>
+</body>
+</html>
