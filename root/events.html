@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- tailwind configuration -->
 </head>
@@ -24,9 +25,9 @@
   </div>
 
   <!-- navigation bar -->
-  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50">
+  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50" >
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-      <a href="#" class="flex items-center">
+      <a href="/root/index.html" class="flex items-center" data-aos="fade-right" data-aos-duration="1000">
         <img src="Images/syrcLogo.png" class="h-6 mr-3 sm:h-10" alt="SYRC Logo"/>
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Team 8729</span>
       </a>
@@ -36,10 +37,10 @@
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
       </button>
       
-      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown" data-aos="fade-down" data-aos-duration="1000">
         <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium  bg-opacity-20 backdrop-blur-lg">
           <li>
-            <a href="/root/index.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
+            <a href="/root/index.html" class="block py-2 pl-3 pr-4 text-gray-400 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-gray-400 dark:bg-blue-600 md:dark:bg-transparent hover:text-white" aria-current="page">Home</a>
           </li>
           <li>
               <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Subteams <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
@@ -47,32 +48,37 @@
               <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                   <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
+                      <a href="/root/software.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
+                      <a href="/root/mechanical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
+                      <a href="/root/electrical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
+                      <a href="/root/outreach.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
                     </li>
                   </ul>
                   <div class="py-1">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Gallery</a>
+                    <a href="/root/team-structure.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Team Structure</a>
                   </div>
               </div>
           </li>
           <li>
-            
-            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent">Events</a>
+            <a href="/root/events.html" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
           </li>
           <li>
-            <a href="" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sponsors</a>
+            <a href="/root/gallery.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
+          </li>
+          <li>
+            <a href="/root/sponsors.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sponsors</a>
           </li>
           <li>
             <a href="/root/contact.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sparkyouthrobotics/"><i class="scale-150 fa fa-instagram fa-2xl fa-inverse"></i></a>
           </li>
         </ul>
       </div>
@@ -80,7 +86,7 @@
   </nav>
 
   <!-- header -->
-  <div class="text-center text-gray-800 py-8 pt-24 px-6" data-aos="fade-down" data-aos-duration="1500">
+  <div class="text-center text-gray-800 py-8 pt-24 px-6">
     <h1 class = "justify-center text-transparent bg-clip-text mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
       <a href="" class="typewrite" data-period="1000000" data-type='["Events and Milestones"]'>
         <span class="wrap"></span>
@@ -88,105 +94,135 @@
     </h1>
   </div>
 
-  <!-- 2018 Divider -->
+  <!-- 2021 Divider -->
   <div class="inline-flex justify-center items-center w-full">
-    <hr class="my-8 w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700">
+    <hr class="w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700">
     <div class="absolute left-1/2 px-4 bg-white -translate-x-1/2 dark:bg-gray-900 font-semibold text-lg text-white">
-      2018   
+      2021    
     </div>
   </div>
 
-  <!-- timeline 2018 -->
+  <!-- timeline 2021 -->
   <div class="container mx-auto w-full h-full">
     <div class="relative wrap overflow-hidden p-10 h-full">
-      <div class="border-2-2 absolute border-opacity-20 border-white-200 h-full border" style="left: 50%"></div>
+      <div class="border-2 absolute border-dashed border-gray-600 h-full border" style="left: 50%"></div>
       <!-- right timeline -->
       <div class="mb-8 flex justify-between items-center w-full right-timeline">
-        <div class="order-1 w-5/12 duration-300 ease-in-out transition"></div>
-        <div class="z-20 flex items-center order-1 bg-purple-800 shadow-xl w-24 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
-          <h1 class="mx-auto font-semibold text-lg text-white text-center">January</h1>
+        <!-- <div class="order-1 w-5/12 duration-300 ease-in-out transition"></div> -->
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-first brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <img src="/root/Images/Events/showcase.png" class="rounded-lg border-8 border-red-500">
         </div>
-        <div class="hover:scale-105 transition ease-in-out duration-700 order-1 bg-red-500 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
-          <h3 class="mb-3 font-bold text-white text-xl">SYRC is registered as a FIRST Robotics Team</h3>
-          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <div class="z-20 flex justify-between justify-center self-center place-self-center items-center bg-purple-800 shadow-xl w-24 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
+          <h1 class="mx-auto font-semibold text-lg text-white text-center">August</h1>
         </div>
-      </div>
-      </div>
-
-      <!-- left timeline -->
-      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-        <div class="order-1 w-5/12 duration-300 ease-in-out transition"></div>
-        <div class="z-20 flex items-center order-1 bg-purple-800 shadow-xl w-16 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
-          <h1 class="mx-auto font-semibold text-lg text-white">2018</h1>
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-last bg-red-500 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <h3 class="mb-3 font-bold text-white text-xl">August Showcase</h3>
+          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Our first practice robot, dubbed Watermelon by the team, was built over the summer of our first year! It was a great skill-building project and we had fun showing it off at our potluck at the end of August!</p>
         </div>
-        <div class="hover:scale-105 transition ease-in-out duration-700 order-1 bg-amber-500 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
-          <h3 class="mb-3 font-bold text-white text-xl">SYRC is registered as a FIRST Robotics Team</h3>
-          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 2019 Divider -->
-  <div class="inline-flex justify-center items-center w-full">
-    <hr class="my-8 w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700">
-    <div class="absolute left-1/2 px-4 bg-white -translate-x-1/2 dark:bg-gray-900 font-semibold text-lg text-white">
-      2019    
-    </div>
-  </div>
-
-  <!-- timeline 2019 -->
-  <div class="container mx-auto w-full h-full">
-    <div class="relative wrap overflow-hidden p-10 h-full">
-      <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
-      <!-- right timeline -->
-      <div class="mb-8 flex justify-between items-center w-full right-timeline">
-        <div class="order-1 w-5/12 duration-300 ease-in-out transition"></div>
-        <div class="z-20 flex items-center order-1 bg-purple-800 shadow-xl w-24 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
-          <h1 class="mx-auto font-semibold text-lg text-white text-center">January</h1>
-        </div>
-        <div class="hover:scale-105 transition ease-in-out duration-700 order-1 bg-green-500 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
-          <h3 class="mb-3 font-bold text-white text-xl">SYRC is registered as a FIRST Robotics Team</h3>
-          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
+        
       </div>
   
       <!-- left timeline -->
       <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-        <div class="order-1 w-5/12 duration-300 ease-in-out transition"></div>
-        <div class="z-20 flex items-center order-1 bg-purple-800 shadow-xl w-16 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
-          <h1 class="mx-auto font-semibold text-lg text-white">2018</h1>
+        
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-first brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <img src="/root/Images/Events/halloween-demo.png" class="rounded-lg border-8 border-orange-500">
         </div>
-        <div class="hover:scale-105 transition ease-in-out duration-700 order-1 bg-sky-600 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
-          <h3 class="mb-3 font-bold text-white text-xl">SYRC is registered as a FIRST Robotics Team</h3>
-          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        
+        <div class="z-20 flex justify-between justify-center self-center place-self-center items-center bg-purple-800 shadow-xl w-24 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
+          <h1 class="mx-auto font-semibold text-lg text-white text-center">October</h1>
         </div>
+        
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-1 bg-orange-500 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <h3 class="mb-3 font-bold text-white text-xl">Halloween Demo at Fallowfield Tree Farm</h3>
+          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">In March, we decided to host a public demo at FTF to showcase our robot to everyone interested. The turnout was great, with over 50 local residents!</p>
+        </div>
+        
       </div>
+
     </div>
   </div>
 
-   <!-- 2020 Divider -->
-   <div class="inline-flex justify-center items-center w-full">
-    <hr class="my-8 w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700">
+  <!-- 2022 Divider -->
+  <div class="mt-8 inline-flex justify-center items-center w-full">
+    <hr class="w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700">
     <div class="absolute left-1/2 px-4 bg-white -translate-x-1/2 dark:bg-gray-900 font-semibold text-lg text-white">
-      2020    
+      2022    
     </div>
   </div>
 
-  <!-- timeline 2020 -->
+  <!-- timeline 2022 -->
   <div class="container mx-auto w-full h-full">
     <div class="relative wrap overflow-hidden p-10 h-full">
-      <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+      <div class="border-2 absolute border-dashed border-gray-600 h-full border" style="left: 50%"></div>
+      
       <!-- right timeline -->
       <div class="mb-8 flex justify-between items-center w-full right-timeline">
-        <div class="order-1 w-5/12 duration-300 ease-in-out transition"></div>
-        <div class="z-20 flex items-center order-1 bg-purple-800 shadow-xl w-24 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
-          <h1 class="mx-auto font-semibold text-lg text-white text-center">January</h1>
+        <!-- <div class="order-1 w-5/12 duration-300 ease-in-out transition"></div> -->
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-first brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <img src="/root/Images/Events/waterloo-district.png" class="rounded-lg border-8 border-green-500">
         </div>
-        <div class="hover:scale-105 transition ease-in-out duration-700 order-1 bg-violet-500 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
-          <h3 class="mb-3 font-bold text-white text-xl">SYRC is registered as a FIRST Robotics Team</h3>
-          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <div class="z-20 flex justify-between justify-center self-center place-self-center items-center bg-purple-800 shadow-xl w-24 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
+          <h1 class="mx-auto font-semibold text-lg text-white text-center">March</h1>
         </div>
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-last bg-green-500 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <h3 class="mb-3 font-bold text-white text-xl">Waterloo District Event</h3>
+          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Our first ever competition robot, Sparky, had its debut at the Waterloo Rapid React event! We were proud to take home the Rookie All-Star Award at the end of the weekend.</p>
+        </div>
+        
+      </div>
+  
+      <!-- left timeline -->
+      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+        
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-first brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <img src="/root/Images/Events/north-bay.png" class="rounded-lg border-8 border-sky-600">
+        </div>
+        
+        <div class="z-20 flex justify-between justify-center self-center place-self-center items-center bg-purple-800 shadow-xl w-24 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
+          <h1 class="mx-auto font-semibold text-lg text-white text-center">March</h1>
+        </div>
+        
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-1 bg-sky-600 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <h3 class="mb-3 font-bold text-white text-xl">North Bay District Event</h3>
+          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Sparky put up a great show again at the North Bay event, where we were proud to finish as Finalists, and won the Rookie Inspiration Award!</p>
+        </div>
+        
+      </div>
+
+      <!-- right timeline -->
+      <div class="mb-8 flex justify-between items-center w-full right-timeline">
+        <!-- <div class="order-1 w-5/12 duration-300 ease-in-out transition"></div> -->
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-first brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <img src="/root/Images/Events/prov-championships.png" class="rounded-lg border-8 border-fuchsia-500">
+        </div>
+        <div class="z-20 flex justify-between justify-center self-center place-self-center items-center bg-purple-800 shadow-xl w-24 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
+          <h1 class="mx-auto font-semibold text-lg text-white text-center">April</h1>
+        </div>
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-last bg-fuchsia-500 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <h3 class="mb-3 font-bold text-white text-xl">Ontario Provincial Championships</h3>
+          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">We had our team spirit turned all the way up entering this four-day provincial competition! Despite being a rookie team, we ended off the 2022 season with a bang, finishing 39th out of all 67 teams in Ontario!</p>
+        </div>
+        
+      </div>
+
+      <!-- left timeline -->
+      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+        
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-first brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <img src="/root/Images/Events/workshop.png" class="rounded-lg border-8 border-indigo-500">
+        </div>
+        
+        <div class="z-20 flex justify-between justify-center self-center place-self-center items-center bg-purple-800 shadow-xl w-24 h-auto hover:scale-125 transition duration-300 ease-in-out rounded-full">
+          <h1 class="mx-auto font-semibold text-lg text-white text-center">June</h1>
+        </div>
+        
+        <div class="hover:scale-105 transition ease-in-out duration-700 order-1 bg-indigo-500 brightness-90 rounded-lg shadow-xl w-5/12 px-6 py-4">
+          <h3 class="mb-3 font-bold text-white text-xl">Classroom Eggdrop Workshop</h3>
+          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Sparkling H2O members visited four elementary school classrooms to introduce students in grades 3 and 5 to the engineering design process! It was fantastic to see all the innovative designs from the next generation of young engineers in our community!</p>
+        </div>
+        
+      </div>
       </div>
     </div>
   </div>
@@ -195,40 +231,32 @@
   <hr class="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700 mb-32">
 
   <!-- google calendar embed -->
-  <style> 
-    iframe
-    {
-      cursor: none;
-      filter: invert(.9) saturate(0.5) hue-rotate(145deg);
-    }
-  </style>
-  <section class="dark:bg-gray-900 dark:text-gray-100 mx-auto">
+  <section class="bg-transparent dark:text-gray-100 mx-auto mb-10">
     <div class="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
       <h2 class="mb-16 text-5xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Events Calendar</h2>
       <div class="z-40 w-full">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FToronto&title=Spark%20Youth%20Robotics%20Events&src=Y19jZjg1NTQ2MTU1N2ZiODhmY2QzMzEyYjA2MGE1NGY1YjJiYzA5NzJlM2EwMGYxNDQ2MDNkNjhhODFiMTYzM2NkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D50000" class="calendar" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe style="
+        cursor: none;
+        filter: invert(.9) saturate(1) hue-rotate(145deg);"
+        
+         src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FToronto&title=Spark%20Youth%20Robotics%20Events&src=Y19jZjg1NTQ2MTU1N2ZiODhmY2QzMzEyYjA2MGE1NGY1YjJiYzA5NzJlM2EwMGYxNDQ2MDNkNjhhODFiMTYzM2NkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D50000" class="calendar" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
     </div>
   </section>
 
   <!-- footer -->
-  <footer class="p-4 mt-auto bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline">Spark Youth Robotics Club</a>. All Rights Reserved.
+  <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-auto sm:justify-center sm:items-center">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="#" class="hover:underline">Spark Youth Robotics Club</a>. @spark.youthrc@gmail.com
     </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <ul class="flex flex-wrap mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0 sm:mt-16 sm:mb-16">
         <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
-        </li>
-        <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-        </li>
-        <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+            <a href="/root/gallery.html" class="mr-4 hover:underline md:mr-6 ">Gallery</a>
         </li>
         <li>
             <a href="/root/contact.html" class="hover:underline">Contact</a>
         </li>
     </ul>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.4252034279993!2d-75.91168018436609!3d45.34022834972786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd1ff36fdc72f51%3A0x41176f540e9876bf!2sHub350!5e0!3m2!1sen!2sca!4v1670337325991!5m2!1sen!2sca" class="translate-y-8 sm:translate-y-0 sm:justify-center sm:items-center" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </footer>
 
   <!-- back to top -->
@@ -244,7 +272,7 @@
   <!-- AOS javascript intallation -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({once:true});
   </script>
 
   <!-- magic mouse cursor -->
