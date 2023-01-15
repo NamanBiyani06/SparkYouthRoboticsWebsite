@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spark Youth Robotics Club</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" href="/root/Images/syrcLogo.png">
+
+  <!-- installations -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- tailwind configuration -->
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <!-- navigation bar -->
+  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50" >
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="/root/index.html" class="flex items-center" data-aos="fade-right" data-aos-duration="1000">
+        <img src="Images/syrcLogo.png" class="h-6 mr-3 sm:h-10" alt="SYRC Logo"/>
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Team 8729</span>
+      </a>
+      
+      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      
+      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown" data-aos="fade-down" data-aos-duration="1000">
+        <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium  bg-opacity-20 backdrop-blur-lg">
+          <li>
+            <a href="/root/index.html" class="block py-2 pl-3 pr-4 text-gray-400 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-gray-400 dark:bg-blue-600 md:dark:bg-transparent hover:text-white" aria-current="page">Home</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Subteams <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="/root/software.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
+                    </li>
+                    <li>
+                      <a href="/root/mechanical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
+                    </li>
+                    <li>
+                      <a href="/root/electrical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
+                    </li>
+                    <li>
+                      <a href="/root/outreach.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="/root/team-structure.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Team Structure</a>
+                  </div>
+              </div>
+          </li>
+          <li>
+            <a href="/root/events.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
+          </li>
+          <li>
+            <a href="/root/gallery.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
+          </li>
+          <li>
+            <a href="/root/sponsors.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sponsors</a>
+          </li>
+          <li>
+            <a href="/root/contact.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sparkyouthrobotics/"><i class="scale-150 fa fa-instagram fa-2xl fa-inverse"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- team structure -->
+  <section class="bg-transparent text-center">
+    <div class="pt-8 px-16 md:px-32 mx-auto max-w-screen-xl lg:pt-16 lg:px-64 mb-16">
+        <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+            <h1 class="mb-6 text-5xl tracking-tight font-bold text-gray-900 dark:text-white">
+              <span class="relative inline-flex sm:inline">
+                <span class="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-70 w-full h-full absolute inset-0"></span>
+                <span class="relative"> Team Structure </span>
+              </span>
+            </h1>
+            <p class="mb-4 font-medium">The Spark Youth Robotics Club has an organized team structure that creates an effective but comfortable work atmosphere. All the members of SYRC are dedicated and passionate. 
+            </p>
+            <p class="mb-4 font-medium">The SYRC team is run by two hard-working Grade 11 organizers, Lily and Angeline. It is then separated into two divisions; non-technical, consisting of jobs unrelated to the building of the robot, and technical, consisting of jobs revolving around the robot build. Finally, we have different subteams under each division that work in different areas.</p>
+            <p class="mb-4 font-medium">Every member of our team is part of a technical subteam. We have people who specialize in software and hardware. The hardware team consists of two more subteams which are electrical and mechanical. The mechanical group focuses on building and designing blueprints for the robot. The electrical group focuses on powering and wiring the robot. Members of the software team program and code instructions for our robot. 
+            </p>
+            <p class="mb-4 font-medium">The non-technical side houses two subteams: outreach and finance. Our outreach team uses their designing and writing skills for practical communication with outside sources of our team. Our economic plans are all formulated by our reliable finance team. They help us work towards our goals as a non-for-profit club. 
+            </p>
+            <img src="/root/images/team-structure.JPG" alt="team structure" class="mx-auto rounded-lg mb-4 lg:scale-90">
+            <p class="mb-4 font-medium">It is essential to maintain a constant connection between comrades to have a unified team. Members of our team communicate amongst each other to learn about each other's work. Although separated into subteams, teamwork is encouraged and we still work closely to accomplish tasks. The synergy among SYRC members is always something to look forward to. Another crucial part of our team structure is our various subteam leads. These assiduous members practice their leadership skills to organize, guide and manage assignments for their group members. The final vital piece of our team is our mentors. Assorted adult mentors help guide our young members. It is especially helpful that they specialize in different areas related to our goals. We are grateful for their support and assistance. </p>
+            <p class="mb-8 font-medium">Thanks to the hard work of each member, SYRC is a well-coordinated team that is ready for any challenge. Our solid team structure allows members to balance different jobs and provides a friendly environment for everyone.</p>
+
+            <p class="mb-8 font-bold"> - The Team at SYRC </p>
+        </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-auto sm:justify-center sm:items-center">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="#" class="hover:underline">Spark Youth Robotics Club</a>. @spark.youthrc@gmail.com
+    </span>
+    <ul class="flex flex-wrap mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0 sm:mt-16 sm:mb-16">
+        <li>
+            <a href="/root/gallery.html" class="mr-4 hover:underline md:mr-6 ">Gallery</a>
+        </li>
+        <li>
+            <a href="/root/contact.html" class="hover:underline">Contact</a>
+        </li>
+    </ul>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.4252034279993!2d-75.91168018436609!3d45.34022834972786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd1ff36fdc72f51%3A0x41176f540e9876bf!2sHub350!5e0!3m2!1sen!2sca!4v1670337325991!5m2!1sen!2sca" class="translate-y-8 sm:translate-y-0 sm:justify-center sm:items-center" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </footer>
+
+  <!-- back to top -->
+  <button id="to-top-button" onclick="goToTop()" title="Go To Top"
+  class="hidden fixed z-90 bottom-20 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-transparent text-white text-3xl font-bold animate-pulse">&uarr;</button>
+
+  <!-- index.js link -->
+  <script src="JS/index.js"></script>
+
+  <!-- flowbite javascript installation -->
+  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+
+  <!-- AOS javascript intallation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true});
+  </script>
+
+  <!-- magic mouse cursor-->
+  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+  <script type="text/javascript">
+    options = {
+  "cursorOuter": "circle-basic",
+  "hoverEffect": "circle-move",
+  "hoverItemMove": false,
+  "defaultCursor": false,
+  "outerWidth": 30,
+  "outerHeight": 30
+      };
+    magicMouse(options);
+  </script>
+</body>
+</html>
