@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Spark Youth Robotics Club</title>
   <link rel="stylesheet" href="CSS/style.css">
-  <link rel="icon" href="/root/Images/syrcLogo.png">
+  <link rel="icon" href="/root/Images/syrcLogo.png" class="w-auto h-auto">
 
   <!-- installations -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- tailwind configuration -->
 </head>
 
 <body class="flex flex-col min-h-screen">
   <!-- navigation bar -->
-  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50">
+  <nav class="sticky top-0 translate-y-0 px-0 border-gray-200 bg-opacity-20 backdrop-blur-lg z-50" >
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-      <a href="#" class="flex items-center">
+      <a href="/root/index.html" class="flex items-center" data-aos="fade-right" data-aos-duration="1000">
         <img src="Images/syrcLogo.png" class="h-6 mr-3 sm:h-10" alt="SYRC Logo"/>
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Team 8729</span>
       </a>
@@ -31,10 +32,10 @@
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
       </button>
       
-      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown" data-aos="fade-down" data-aos-duration="1000">
         <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium  bg-opacity-20 backdrop-blur-lg">
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+            <a href="/root/index.html" class="block py-2 pl-3 pr-4 text-gray-400 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-gray-400 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
           </li>
           <li>
               <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Subteams <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
@@ -42,107 +43,103 @@
               <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                   <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
+                      <a href="/root/software.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Software</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
+                      <a href="/root/mechanical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mechanical</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
+                      <a href="/root/electrical.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Electrical</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
+                      <a href="/root/outreach.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Outreach</a>
                     </li>
                   </ul>
                   <div class="py-1">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Gallery</a>
+                    <a href="/root/team-structure.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Team Structure</a>
                   </div>
               </div>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
+            <a href="/root/events.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sponsors</a>
+            <a href="/root/gallery.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+            <a href="/root/sponsors.html" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sponsors</a>
+          </li>
+          <li>
+            <a href="/root/contact.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sparkyouthrobotics/"><i class="scale-150 fa fa-instagram fa-2xl fa-inverse"></i></a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <!-- sponsor header -->
+  <section>
+  <section class="bg-transparent text-center">
+    <div class="pt-8 px-4 mx-auto max-w-screen-xl lg:pt-16 lg:px-64 md:px-32">
+        <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+            <h1 class="mb-6 text-5xl tracking-tight font-bold text-gray-900 dark:text-white">
+              <span class="relative inline-flex sm:inline">
+                <span class="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-70 w-full h-full absolute inset-0"></span>
+                <span class="relative"> Our Sponsors </span>
+              </span>
+            </h1>
+            <p class="mb-4 font-medium">Sponsors are essential to the operation of Spark Youth Robotics Club. Without their support, it would be difficult for us to purchase the materials and equipment necessary for our projects and activities. In addition to providing financial assistance, sponsors also contribute their expertise and resources, which helps us to better understand and advance in the field of robotics.</p>
+            
+            <p class="mb-4 font-medium">We are grateful for the generosity of our sponsors, as they play a crucial role in the success of our club. Without them, it would be much more difficult for us to achieve our goals and make a positive impact in our community. Their support allows us to continue running our club and pursuing our passion for robotics.</p>
 
-  <!-- sponsor cards -->
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 pt-10 mx-auto">
-      <div class="flex flex-col text-center w-full mb-7">
-        <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Our Sponsors</h1>
+            <a href="https://forms.gle/FQvMNh9FFYuh3kYY8" class="inline-flex items-center font-medium text-blue-500 hover:text-primary-800 hover:scale-105 dark:text-blue-500 dark:hover:text-primary-700">
+                Interested in Sponsoring?
+                <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+    </div>
+  </section>
+
+  <!-- logo cloud -->
+  <section class="bg-transparent" data-aos="fade-up" data-aos-duration="3000">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-2 mb-8">
+
+      <!-- collage -->
+      <div class="mt-10 mb-10 grayscale grid text-white lg:gap-12 md:gap-8 sm:gap-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 overflow-x-hidden flex place-items-center bg-blue-300 rounded-lg">
+        <div>
+          <img src="/root/Images/Sponsors/CIBC-Logo.png" alt="">
+        </div>
+        <div class="invert">
+          <img src="/root/Images/Sponsors/CarletonLogo.png" alt="">
+        </div>
+        <div class="mb-32 md:mb-0 lg:mb-0 sm:mb-16">
+          <img src="/root/Images/Sponsors/RossVideoLogo.webp" alt="">
+        </div>
+        <div class="invert mb-8 sm:mb-0">
+          <img src="/root/Images/Sponsors/CoastalReignLogo.png" alt="">
+        </div>
       </div>
-      <div class="flex flex-wrap justify-center">
-        <div class="flex flex-col mx-5 mb-5">
-          <div class="md:w-full">
-            <div class="h-full p-6 rounded-lg shadow-lg border-2 border-yellow-300 flex flex-col relative overflow-hidden items-center">
-              <h2 class="text-sm tracking-widest title-font mb-1 font-medium">GOLD</h2>
-              <a href="https://www.jetbrains.com/">
-              <img alt="gallery" class="object-cover object-center rounded-lg " src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" style="width:300px; height:300px;">
-            </a></div><a href="https://www.jetbrains.com/">
-          </a></div><a href="https://www.jetbrains.com/">
-        </a></div><a href="https://www.jetbrains.com/">
-        </a><div class="flex flex-col mx-5 mb-5"><a href="https://www.jetbrains.com/">
-          </a><div class="w-full"><a href="https://www.jetbrains.com/">
-            </a><a href="https://www.taskade.com/">
-            <div class="h-[376px] p-6 rounded-lg shadow-lg border-2 border-yellow-300 flex flex-col relative overflow-hidden items-center">
-              <h2 class="text-sm tracking-widest title-font mb-1 font-medium">GOLD</h2>
-              <img alt="gallery" class="object-cover object-center rounded-lg my-auto" src="static/images/wolfram.png" style="width:300px;">
-            </div>
-          </a></div><a href="https://www.taskade.com/">
-        </a></div><a href="https://www.taskade.com/">
-
-        </a><div class="flex flex-col mx-5 mb-5"><a href="https://www.taskade.com/">
-          </a><div class="w-full"><a href="https://www.taskade.com/">
-            </a><a href="https://www.taskade.com/">
-            <div class="h-full p-6 rounded-lg shadow-lg border-2 border-yellow-300 flex flex-col relative overflow-hidden items-center">
-              <h2 class="text-sm tracking-widest title-font mb-1 font-medium">GOLD</h2>
-              <img alt="gallery" class="object-cover object-center rounded-lg my-auto" src="static/images/taskade-circle-icon.png" style="width:300px;">
-            </div>
-          </a></div><a href="https://www.taskade.com/">
-        </a></div><a href="https://www.taskade.com/">
-        
-        </a><div class="flex flex-col mx-5 mb-5"><a href="https://www.taskade.com/">
-          </a><div class="w-full"><a href="https://www.taskade.com/">
-            </a><a href="https://www.artofproblemsolving.com/">
-            <div class="h-[376px] p-6 rounded-lg shadow-lg flex flex-col border-2 border-yellow-600 relative overflow-hidden items-center">
-              <h2 class="text-sm tracking-widest title-font mb-1 font-medium">BRONZE</h2>
-              <img alt="gallery" class="object-cover object-center rounded-lg my-auto" src="static/images/aops.png" style="width:300px;">
-            </div>
-          </a></div><a href="https://www.artofproblemsolving.com/">
-        </a></div><a href="https://www.artofproblemsolving.com/">
-      </a></div><a href="https://www.artofproblemsolving.com/">
-
-    </a></div><a href="https://www.artofproblemsolving.com/">
-  </a></section>
+      <button href="https://forms.gle/FQvMNh9FFYuh3kYY8" type="button" class="w-full px-8 py-3 font-semibold rounded-full dark:bg-gray-300 dark:text-gray-800 hover:scale-95 hover:bg-white via-fuchsia-500 to-indigo-500 transition-all duration-700">Interested in Sponsoring?</button>
+    </div>
+  </section>
+</section>
 
   <!-- footer -->
-  <footer class="p-4 mt-auto bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline">Spark Youth Robotics Club</a>. All Rights Reserved.
+  <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-auto sm:justify-center sm:items-center">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="#" class="hover:underline">Spark Youth Robotics Club</a>. @spark.youthrc@gmail.com
     </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <ul class="flex flex-wrap mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0 sm:mt-16 sm:mb-16">
         <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+            <a href="/root/gallery.html" class="mr-4 hover:underline md:mr-6 ">Gallery</a>
         </li>
         <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-        </li>
-        <li>
-            <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline">Contact</a>
+            <a href="/root/contact.html" class="hover:underline">Contact</a>
         </li>
     </ul>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.4252034279993!2d-75.91168018436609!3d45.34022834972786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd1ff36fdc72f51%3A0x41176f540e9876bf!2sHub350!5e0!3m2!1sen!2sca!4v1670337325991!5m2!1sen!2sca" class="translate-y-8 sm:translate-y-0 sm:justify-center sm:items-center" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </footer>
-
   <!-- back to top -->
   <button id="to-top-button" onclick="goToTop()" title="Go To Top"
   class="hidden fixed z-90 bottom-20 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-transparent text-white text-3xl font-bold animate-pulse">&uarr;</button>
@@ -156,7 +153,7 @@
   <!-- AOS javascript intallation -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({once:true});
   </script>
 
   <!-- magic mouse cursor-->
